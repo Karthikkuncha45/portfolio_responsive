@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        
+        h2{
+            text-align: center;
+            font-size: 100px;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color:white;
+        }
+        .table-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            height:500px;
+            border-collapse: collapse;
+            background-color: #343131;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            font-size: 16px;
+        }
+
+        th {
+            background-color: #202121;
+            color: white;
+            font-size: 70px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+
+
+        td {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+        }
+
+        a{
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 40px;
+            color: white;
+        }
+        a:hover{
+            color:blue;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 768px) {
+            table {
+                width: 100%;
+            }
+            
+            th, td {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h2>My Education</h2>
+    <div class="container">
+        <table>
+          <thead>
+            <tr>
+                <th>Class</th>
+                <th>School/College</th>
+                <th>Year</th>
+                <th>Location</th>
+                <th>Percentage/CGPA</th>
+            </tr>
+            <tr>
+                <td>10th</td>
+                <td>Montessori English Medium School</td>
+                <td>2019-2020</td>
+                <td>Piduguralla</td>
+                <td>9.2 CGPA</td>
+            </tr>
+            <tr>
+                <td>12th</td>
+                <td href="https://www.google.com/imgres?q=scholars%20junior%20college%20piduguralla&imgurl=https%3A%2F%2Fcontent3.jdmagicbox.com%2Fcomp%2Fnarasaraopet%2Fq9%2F9999px863.x863.180816195625.f6q9%2Fcatalogue%2Fscholars-international-school-piduguralla-narasaraopet-international-schools-z3v1oav8vl.jpg&imgrefurl=https%3A%2F%2Fwww.justdial.com%2FPalnadu%2FScholars-International-School-Opposite-Rtc-Bus-Stand-Piduguralla%2F9999PX863-X863-180816195625-F6Q9_BZDET&docid=hX4evLBMQ1Fp3M&tbnid=85-vW4qYbbG67M&vet=12ahUKEwiniJXPy5qMAxX1wTgGHY4IEH0QM3oECHkQAA..i&w=2000&h=1500&hcb=2&ved=2ahUKEwiniJXPy5qMAxX1wTgGHY4IEH0QM3oECHkQAA">Scholars Junior College</td>
+                <td>2020-2022</td>
+                <td>Piduguralla</td>
+                <td>92.5%</td>
+            </tr>
+            <tr>
+                <td>B.Tech (CSE - AI & ML)</td>
+                <td>Narasaraopeta Engineering College</td>
+                <td>2022 - Present</td>
+                <td>Narasaraopeta</td>
+                <td>8.57</td>
+            </tr>
+    </table>
+
+    <a href="{{ url_for('home') }}" id="Home_tag">Back to Home</a>
+</body>
+</html>

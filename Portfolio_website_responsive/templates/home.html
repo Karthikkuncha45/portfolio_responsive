@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li style="--i:1"><a href="#home">Home</a></li>
+                <li style="--i:2"><a href="#achievements">My Achievements</a></li>
+                <li style="--i:3"><a href="#certifications">Certifications</a></li>
+                <li style="--i:4"><a href="#internships">Internships</a></li>
+                <li style="--i:5"><a href="#projects">Projects</a></li>
+                <li style="--i:6"><a href="#skills">Skills</a></li>
+                <li style="--i:7"><a href="#hobbies">Hobbies</a></li>
+                <li style="--i:8"><a href="#" onclick="window.location='/education'; return false;">Education</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="home" class="content-section">Welcome to my Portfolio!</div>
+    <div id="achievements" class="content-section">My Achievements Content</div>
+    <div id="certifications" class="content-section">Certifications Content</div>
+    <div id="internships" class="content-section">Internships Content</div>
+    <div id="projects" class="content-section">Projects Content</div>
+    <div id="skills" class="content-section">Skills Content</div>
+    <div id="hobbies" class="content-section">Hobbies Content</div>
+    <div id="education" class="content-section">Education Content</div>
+
+    <section id="content"></section>
+    
+    <section class="home">
+        <div class="info">
+            <p>Hello, it's me... <span class="name"></span></p>
+            <p>I am a passionate Machine Learning Developer.</p>
+            <p>I love creating projects that make an impact.</p>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/Main_Image_InHome.jpg') }}" alt="My Photo">
+        </div>
+    </section>
+    
+    <section class="about-container">
+        <!-- Left Side - Image -->
+        <div class="about-image">
+            <img src="static/images/Home_image_2.jpg" alt="Karthik's Image">
+        </div>
+    
+        <!-- Right Side - About Text -->
+        <div class="about-text">
+            <p>I'm <strong style="color: tomato;">Karthik</strong> from Piduguralla, Andhra Pradesh. Currently pursuing my B.Tech degree at <strong style="color:darkturquoise;">Narasaraopeta Engineering College</strong> in the stream of <strong style="font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">CSE (AI&ML)</strong>.</p>
+        </div>
+    </section>
+    
+    <section class="contact-container">
+        <!-- Left Side - Social Media Icons -->
+        <div class="social-media">
+            <h2 class="social-heading">Follow Me On:</h2>
+            <div class="contact-social">
+                <a href="https://www.instagram.com/karthiknaidu__45/" target="_blank">
+                    <img src="static/images/instagram_logo.jpg" alt="Instagram">
+                </a>
+                <a href="https://www.facebook.com/karthik.kuncha.31" target="_blank">
+                    <img src="static/images/facebook_logo.jpg" alt="Facebook">
+                </a>
+                <a href="https://www.youtube.com/@Karthik_king_45" target="_blank">
+                    <img src="static/images/youtube_logo.png" alt="YouTube">
+                </a>
+                <a href="https://www.linkedin.com/in/karthik-kuncha-2b845b289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                    <img src="static/images/linkedin_logo.png" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/Btechkarthik22?t=xDH_5XlRRwyF3shSaoPYuw&s=09" target="_blank">
+                    <img src="static/images/twitter.png" alt="Twittter">
+                </a>
+            </div>
+        </div>
+    
+        <!-- Right Side - Contact Form -->
+        <div class="contact-form">
+            <h2 class="form-heading">Contact Me</h2>
+            <form id="contactForm" action="/submit-form" method="POST" onsubmit="return validateForm()">
+                <input type="text" id="name" name="name" placeholder="Your Name">
+                <input type="tel" id="phone" name="phone" placeholder="Phone Number">
+                <textarea id="message" name="message" placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>    
+        </div>        
+    </section> 
+    
+    <footer>
+        <p class="copyright">Copyright 2025 Karthik. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
